@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>😂 Anshu's Meme World 😂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #ff4d4d;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>😂 Welcome to My Meme Website 😂</h1>
+
+<img id="meme" src="https://i.imgur.com/9bK0V5B.jpg">
+
+<br>
+<button onclick="changeMeme()">Next Meme</button>
+
+<script>
+const memes = [
+"https://i.imgur.com/9bK0V5B.jpg",
+"https://i.imgur.com/JqEuJ6t.jpg",
+"https://i.imgur.com/2uC9Z5K.jpg",
+"https://i.imgur.com/8Km9tLL.jpg"
+];
+
+function changeMeme() {
+    const random = Math.floor(Math.random() * memes.length);
+    document.getElementById("meme").src = memes[random];
+}
+</script>
+
+</body>
+</html>
